@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicLong;
 
-public abstract class StoreRepositoryImpl<T extends BaseModel> extends BaseComponent implements BaseService<T, Long> {
+public abstract class BaseRepositoryImpl<T extends BaseModel> extends BaseComponent implements BaseService<T, Long> {
     protected abstract ConcurrentHashMap<Long, T> getStorage();
 
     protected abstract AtomicLong getSequence();

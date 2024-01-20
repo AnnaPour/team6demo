@@ -5,5 +5,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface StoreCategoryRepository extends BaseRepository<StoreCategory, Long> {
-    StoreCategory findBycategoryName(final String categoryName);
+    StoreCategory findByStoreCategory(final String categoryName);
 }
