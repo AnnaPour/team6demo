@@ -1,10 +1,6 @@
 package com.example.team6demo.helper;
 
-package gr.codelearn.spring.showcase.app.bootstrap;
 
-import gr.codelearn.spring.showcase.app.base.BaseComponent;
-import gr.codelearn.spring.showcase.app.service.OrderService;
-import gr.codelearn.spring.showcase.app.service.ProductService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Profile;
