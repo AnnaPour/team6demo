@@ -35,7 +35,7 @@ public class CatalogCustomerSampleContentCreator extends BaseComponent implement
 
     @Override
 	public void run(String... args) throws Exception {
-		Category newCategory = categoryService.create(Product.builder().serial("PRODUCTS").build());
+		Category newCategory = categoryService.create(Product.builder().serial("PRODUCTS").build().getCategory());
 		logger.info("Created {}.", newCategory);
 
 		List<Product> products = List.of(
@@ -48,8 +48,8 @@ public class CatalogCustomerSampleContentCreator extends BaseComponent implement
 				Product.builder().serial("SN1100-0002").name("ΠΙΤΣΑ")
 					   .price(BigDecimal.valueOf(1199)).category(newCategory).build(),
 				Product.builder().serial("SN1200-0001").name("BURGER")
-					   .price(BigDecimal.valueOf(899.49)).category(newCategory).build();
-
+					   .price(BigDecimal.valueOf(899.49)).category(newCategory).build()
+);
 
 		var productsCreated = productService.createAll(products);
 		logger.info("Created {} products.", productsCreated.size());
@@ -57,7 +57,7 @@ public class CatalogCustomerSampleContentCreator extends BaseComponent implement
 					   .sorted(Comparator.comparing(Product::getId))
 					   .forEach(p -> logger.debug("{}. {}", p.getId(), p));
 
-		List<Customer> customersCreated = customerService.createAll(
+		List<Customer> customersCreated = customerService.createAll()(
 				Customer.builder().email("c.giannacoulis@codehub.gr")
 						.firstname("Constantinos").lastname("Giannacoulis")
 						.address("678, ATHENS")
@@ -72,9 +72,8 @@ public class CatalogCustomerSampleContentCreator extends BaseComponent implement
 				Customer.builder().email("melina.vasil@gmailx.com")
 						.firstname("Melina").lastname("Vasilopoulou")
 						.address("890, LONDON")
-						.age(28).build(),
-
-		);
+						.age(28).build()
+				);
 
 
 		logger.info("Created {} customers.", customersCreated.size());

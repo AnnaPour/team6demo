@@ -7,6 +7,7 @@ import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotNull;
 import lombok.*;
 
+
 @Getter
 @Setter
 @Builder
@@ -22,8 +23,4 @@ public class StoreCategory extends BaseModel {
     private String categoryName;
 
 
-    public void setCategoryName(String categoryName) {
-
-            this.categoryName = categoryName;
-        }
-    }
+}

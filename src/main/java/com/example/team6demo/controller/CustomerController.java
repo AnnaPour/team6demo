@@ -1,14 +1,13 @@
 package com.example.team6demo.controller;
 
-package gr.codelearn.spring.showcase.app.controller;
 
-import gr.codelearn.spring.showcase.app.mapper.BaseMapper;
-import gr.codelearn.spring.showcase.app.mapper.CustomerMapper;
-import gr.codelearn.spring.showcase.app.model.Customer;
-import gr.codelearn.spring.showcase.app.service.BaseService;
-import gr.codelearn.spring.showcase.app.service.CustomerService;
-import gr.codelearn.spring.showcase.app.transfer.ApiResponse;
-import gr.codelearn.spring.showcase.app.transfer.resource.CustomerResource;
+
+import com.example.team6demo.mapper.CustomerMapper;
+import com.example.team6demo.model.model.Customer;
+import com.example.team6demo.services.BaseService;
+import com.example.team6demo.services.CustomerService;
+import com.example.team6demo.tran.resource.CustomerResource;
+import com.fasterxml.classmate.AnnotationOverrides;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -35,6 +34,7 @@ public class CustomerController extends BaseController<Customer, CustomerResourc
 
     @GetMapping(params = {"email"})
     public ResponseEntity<ApiResponse<CustomerResource>> findByEmail(@RequestParam String email) {
+        AnnotationOverrides ApiResponse;
         return ResponseEntity.ok(ApiResponse.<CustomerResource>builder()
                 .data(customerMapper.toResource(customerService.findByEmail(email)))
                 .build());
