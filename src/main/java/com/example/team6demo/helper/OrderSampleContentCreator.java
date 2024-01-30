@@ -3,7 +3,7 @@ package com.example.team6demo.helper;
 
 import com.example.team6demo.base.BaseComponent;
 import com.example.team6demo.model.Customer;
-import com.example.team6demo.model.model.PaymentMethod;
+import com.example.team6demo.model.PaymentMethod;
 import com.example.team6demo.services.CustomerService;
 import com.example.team6demo.services.OrderService;
 import com.example.team6demo.services.ProductService;

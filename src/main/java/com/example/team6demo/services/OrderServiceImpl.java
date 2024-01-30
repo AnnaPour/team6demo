@@ -5,20 +5,19 @@ import com.example.team6demo.model.Customer;
 import com.example.team6demo.model.Order;
 import com.example.team6demo.model.OrderItem;
 import com.example.team6demo.model.Product;
-import com.example.team6demo.model.model.*;
+import com.example.team6demo.model.*;
 import com.example.team6demo.repository.OrderRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
-import java.math.RoundingMode;
 import java.util.Date;
 import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
-public class OrderServiceImpl extends BaseServiceImpl<Order> implements OrderService {
+public abstract class OrderServiceImpl extends BaseServiceImpl<Order> implements OrderService {
 	private final OrderRepository orderRepository;
 
 	@Override
@@ -88,7 +87,7 @@ public class OrderServiceImpl extends BaseServiceImpl<Order> implements OrderSer
 		// Set all order fields with proper values
 		order.setPaymentMethod(paymentMethod);
 		order.setSubmitDate(new Date());
-		order.setCost(giveDiscounts(order));
+		order.setCost(giveFinalCost(order));
 		order.setStatus(OrderStatus.COMPLETED);
 
 		return create(order);
@@ -123,22 +122,13 @@ public class OrderServiceImpl extends BaseServiceImpl<Order> implements OrderSer
 		return OrderItem.builder().product(product).quantity(quantity).price(product.getPrice()).order(order).build();
 	}
 
-	private BigDecimal giveDiscounts(Order order) {
-		float totalDiscount =
-				order.getCustomer().getCustomerCategory().getDiscount() + order.getPaymentMethod().getDiscount();
+	private BigDecimal giveFinalCost(Order order) {
 
-		// Calculate original order cost
-		BigDecimal originalCost = order.getOrderItems()
+		BigDecimal finalCost = order.getOrderItems()
 									   .stream()
 									   .map(oi -> oi.getPrice().multiply(BigDecimal.valueOf(oi.getQuantity())))
 									   .reduce(BigDecimal.ZERO, BigDecimal::add);
 
-		// Apply discount
-		BigDecimal finalCost = originalCost.multiply(BigDecimal.valueOf(1f - totalDiscount));
-
-		logger.debug("Order[{}], originalCost: {}, discount: {}%, finalCost: {}.", order.getId(),
-					 originalCost.setScale(2, RoundingMode.HALF_UP), Math.round(totalDiscount * 100),
-					 finalCost.setScale(2, RoundingMode.HALF_UP));
 
 		return finalCost;
 	}

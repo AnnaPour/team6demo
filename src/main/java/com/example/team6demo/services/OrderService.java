@@ -1,20 +1,26 @@
 package com.example.team6demo.services;
 
-import com.example.team6demo.model.Account;
-import com.example.team6demo.model.PaymentMethod;
-import com.example.team6demo.model.Product;
+import com.example.team6demo.model.*;
 
 public interface OrderService extends BaseService<Order, Long>  {
     Order initiateOrder(Account account);
 
-   void addItem(Order order, Product product, int quantity);
+    Order initiateOrder(Customer customer);
+
+    void addItem(Order order, Product product, int quantity);
 
   void updateItem(Order order, Product product, int quantity);
 
   void removeItem(Order order, Product product);
 
-    Order checkout(Order order, PaymentMethod paymentMethod);
+    default Order checkout(PaymentMethod paymentMethod) {
+        return checkout(null, paymentMethod);
+    }
+
+    default Order checkout(Order order, PaymentMethod paymentMethod) {
+        return null;
+    }
 
 
-    void checkout(Order secondOrder, com.example.team6demo.model.model.PaymentMethod paymentMethod);
+    Order checkout(Order secondOrder, PaymentMethod paymentMethod);
 }

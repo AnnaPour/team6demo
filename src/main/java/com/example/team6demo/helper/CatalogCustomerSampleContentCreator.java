@@ -55,12 +55,7 @@ public class CatalogCustomerSampleContentCreator extends BaseComponent implement
 					   .sorted(Comparator.comparing(Product::getId))
 					   .forEach(p -> logger.debug("{}. {}", p.getId(), p));
 
-		List<Customer> customersCreated = customerService.createAll()(
-				Customer.builder().email("c.giannacoulis@codehub.gr")
-						.firstname("Constantinos").lastname("Giannacoulis")
-						.address("678, ATHENS")
-						.age(47).build(),
-				Customer.builder().email("alexia.tsrk@gmailx.com")
+		List<Customer> customersCreated = customerService.createAll()Customer.builder().email("alexia.tsrk@gmailx.com")
 						.firstname("Alexia").lastname("Tsirikou")
 						.address("345, VOLOS")
 						.age(23).build(),
@@ -70,11 +65,16 @@ public class CatalogCustomerSampleContentCreator extends BaseComponent implement
 				Customer.builder().email("melina.vasil@gmailx.com")
 						.firstname("Melina").lastname("Vasilopoulou")
 						.address("890, LONDON")
-						.age(28).build()
+						.age(28).build(),
+				(
+				Customer.builder().email("c.giannacoulis@codehub.gr")
+						.firstname("Constantinos").lastname("Giannacoulis")
+						.address("678, ATHENS")
+						.age(47).build();
 				);
 
 
-		logger.info("Created {} customers.", customersCreated.size());
+        logger.info("Created {} customers.", customersCreated.size());
 		customersCreated.stream()
 						.sorted(Comparator.comparing(Customer::getId))
 						.forEach(c -> logger.debug("{}. {}", c.getId(), c));

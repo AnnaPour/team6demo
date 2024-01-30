@@ -25,7 +25,7 @@ import java.util.concurrent.TimeUnit;
 public abstract class BaseController<T extends BaseModel, R extends BaseResource> extends BaseComponent {
     protected abstract BaseService<T, Long> getBaseService();
 
-    protected abstract BaseMapper<T, R> getMapper();
+    protected abstract BaseMapper<Category, CategoryResource> getMapper();
 
     @GetMapping("{id}")
     public ResponseEntity<ApiResponse<R>> get(@PathVariable("id") final Long id) {

@@ -1,7 +1,7 @@
 package com.example.team6demo.model;
 
-import com.example.team6demo.model.model.BaseModel;
-import com.example.team6demo.model.model.CustomerCategory;
+import com.example.team6demo.model.BaseModel;
+
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.Max;
@@ -39,7 +39,5 @@ public class Customer extends BaseModel {
 	@Column(length = 50)
 	private String address;
 
-	@Enumerated(EnumType.STRING)
-	@Column(length = 10, nullable = false)
-	private CustomerCategory customerCategory;
+
 }

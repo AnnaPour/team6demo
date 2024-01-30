@@ -1,4 +1,5 @@
 package com.example.team6demo.controller;
+import com.example.team6demo.mapper.BaseMapper;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -16,7 +17,7 @@ public class OrderController extends BaseController<Order, OrderResource> {
     }
 
     @Override
-    protected BaseMapper<Order, OrderResource> getMapper() {
+    protected BaseMapper<Category, CategoryResource> getMapper() {
         return orderMapper;
     }
 }

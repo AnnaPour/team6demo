@@ -30,7 +30,7 @@ public class ProductController extends BaseController<Product, ProductResource> 
     }
 
     @Override
-    protected BaseMapper<Product, ProductResource> getMapper() {
+    protected BaseMapper<Category, CategoryResource> getMapper() {
         return productMapper;
     }
 

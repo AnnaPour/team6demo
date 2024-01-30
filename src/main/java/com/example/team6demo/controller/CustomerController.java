@@ -2,6 +2,7 @@ package com.example.team6demo.controller;
 
 
 
+import com.example.team6demo.mapper.BaseMapper;
 import com.example.team6demo.mapper.CustomerMapper;
 import com.example.team6demo.model.Customer;
 import com.example.team6demo.services.BaseService;
@@ -28,7 +29,7 @@ public class CustomerController extends BaseController<Customer, CustomerResourc
     }
 
     @Override
-    protected BaseMapper<Customer, CustomerResource> getMapper() {
+    protected BaseMapper<Category, CategoryResource> getMapper() {
         return customerMapper;
     }
 
