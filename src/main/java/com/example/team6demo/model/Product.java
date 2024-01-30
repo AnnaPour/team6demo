@@ -33,4 +33,7 @@ public class Product extends BaseModel {
 	@NotNull
 	@ManyToOne(fetch = FetchType.EAGER)
 	private Category category;
+
+	@ManyToOne(fetch = FetchType.EAGER)
+	private ProductCategory productCategory;
 }
