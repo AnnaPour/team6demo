@@ -1,3 +1,5 @@
+package com.example.team6demo.mapper;
+
 import java.util.List;
 
 public interface BaseMapper<D, R> {

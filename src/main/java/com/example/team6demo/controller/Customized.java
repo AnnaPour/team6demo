@@ -1,10 +1,9 @@
-package com.example.team6demo.controller;
+package com.example.team6demo.controlle
 
-package gr.codelearn.spring.showcase.app.controller;
 
-import gr.codelearn.spring.showcase.app.base.BaseComponent;
-import gr.codelearn.spring.showcase.app.transfer.ApiError;
-import gr.codelearn.spring.showcase.app.transfer.ApiResponse;
+import com.example.team6demo.base.BaseComponent;
+import com.example.team6demo.tran.ApiResponse;
+import com.example.team6demo.tran.resource.ApiError;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.util.StringUtils;

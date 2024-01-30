@@ -1,6 +1,6 @@
 package com.example.team6demo.tran.resource;
 
-import gr.codelearn.spring.showcase.app.model.CustomerCategory;
+
 import jakarta.validation.constraints.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -27,6 +27,4 @@ public class CustomerResource extends BaseResource {
 	@Size(max = 50, message = "Address cannot be longer than 50 characters")
 	private String address;
 
-	@NotNull
-	private CustomerCategory customerCategory;
 }

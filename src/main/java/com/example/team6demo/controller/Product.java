@@ -1,6 +1,12 @@
 package com.example.team6demo.controller;
 
 
+import com.example.team6demo.mapper.BaseMapper;
+import com.example.team6demo.mapper.ProductMapper;
+import com.example.team6demo.model.Product;
+import com.example.team6demo.services.BaseService;
+import com.example.team6demo.services.ProductService;
+import com.example.team6demo.tran.resource.ProductResource;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

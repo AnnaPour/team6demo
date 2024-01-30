@@ -3,7 +3,6 @@ package com.example.team6demo.model;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
 import lombok.*;
-import org.antlr.v4.runtime.misc.NotNull;
 
 @Getter
 @Setter

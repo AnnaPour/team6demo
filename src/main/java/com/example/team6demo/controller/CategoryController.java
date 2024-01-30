@@ -1,13 +1,11 @@
 package com.example.team6demo.controller;
-package gr.codelearn.spring.showcase.app.controller;
 
-import gr.codelearn.spring.showcase.app.mapper.BaseMapper;
-import gr.codelearn.spring.showcase.app.mapper.CategoryMapper;
-import gr.codelearn.spring.showcase.app.model.Category;
-import gr.codelearn.spring.showcase.app.service.BaseService;
-import gr.codelearn.spring.showcase.app.service.CategoryService;
-import gr.codelearn.spring.showcase.app.transfer.ApiResponse;
-import gr.codelearn.spring.showcase.app.transfer.resource.CategoryResource;
+
+import com.example.team6demo.mapper.CategoryMapper;
+import com.example.team6demo.model.model.Category;
+import com.example.team6demo.services.BaseService;
+import com.example.team6demo.services.CategoryService;
+import com.example.team6demo.tran.resource.CategoryResource;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;

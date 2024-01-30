@@ -1,7 +1,8 @@
 package com.example.team6demo.services;
 
-import gr.codelearn.spring.showcase.app.model.Product;
-import gr.codelearn.spring.showcase.app.repository.ProductRepository;
+
+import com.example.team6demo.model.Product;
+import com.example.team6demo.repository.ProductRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Service;

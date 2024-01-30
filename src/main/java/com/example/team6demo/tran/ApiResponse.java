@@ -1,2 +1,9 @@
-package com.example.team6demo.tran;public class ApiResponse {
+package com.example.team6demo.tran;
+
+import org.springframework.http.codec.ServerSentEvent;
+
+import java.util.List;
+
+public class ApiResponse {
+
 }

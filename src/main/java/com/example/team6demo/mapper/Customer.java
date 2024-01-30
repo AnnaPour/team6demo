@@ -1,11 +1,12 @@
 package com.example.team6demo.mapper;
 
-package gr.codelearn.spring.showcase.app.mapper;
 
-import gr.codelearn.spring.showcase.app.model.Customer;
-import gr.codelearn.spring.showcase.app.transfer.resource.CustomerResource;
+
+
+import com.example.team6demo.model.model.Customer;
+import com.example.team6demo.tran.resource.CustomerResource;
 import org.mapstruct.Mapper;
 
 @Mapper(componentModel = "spring", config = IgnoreUnmappedMapperConfig.class)
-public interface CustomerMapper extends BaseMapper<Customer, CustomerResource> {
+interface CustomerMapper extends BaseMapper<Customer, CustomerResource> {
 }

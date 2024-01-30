@@ -1,8 +1,9 @@
 package com.example.team6demo.tran.resource;
 
+import com.example.team6demo.model.model.OrderStatus;
+import com.example.team6demo.model.model.PaymentMethod;
 import com.fasterxml.jackson.annotation.JsonFormat;
-import gr.codelearn.spring.showcase.app.model.OrderStatus;
-import gr.codelearn.spring.showcase.app.model.PaymentMethod;
+
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;

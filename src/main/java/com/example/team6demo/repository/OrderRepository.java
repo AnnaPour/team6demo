@@ -1,6 +1,7 @@
 package com.example.team6demo.repository;
 
-import gr.codelearn.spring.showcase.app.model.Order;
+
+import com.example.team6demo.model.model.Order;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
