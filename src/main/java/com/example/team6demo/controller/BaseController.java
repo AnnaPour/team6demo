@@ -1,11 +1,5 @@
 package com.example.team6demo.controller;
 
-import gr.codelearn.spring.showcase.app.base.BaseComponent;
-import gr.codelearn.spring.showcase.app.mapper.BaseMapper;
-import gr.codelearn.spring.showcase.app.model.BaseModel;
-import gr.codelearn.spring.showcase.app.service.BaseService;
-import gr.codelearn.spring.showcase.app.transfer.ApiResponse;
-import gr.codelearn.spring.showcase.app.transfer.resource.BaseResource;
 import jakarta.validation.Valid;
 import org.springframework.http.CacheControl;
 import org.springframework.http.HttpHeaders;

@@ -1,6 +1,7 @@
 package com.example.team6demo.services;
 
-import gr.codelearn.spring.showcase.app.model.BaseModel;
+
+import com.example.team6demo.model.BaseModel;
 
 import java.util.List;
 
@@ -17,7 +18,7 @@ public interface BaseService<T extends BaseModel, K> {
 
 	void deleteById(K id);
 
-	T get(K id);
+	Object get(K id);
 
 	boolean exists(T item);
 

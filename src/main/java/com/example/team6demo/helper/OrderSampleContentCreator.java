@@ -2,6 +2,7 @@ package com.example.team6demo.helper;
 
 
 import com.example.team6demo.base.BaseComponent;
+import com.example.team6demo.model.Account;
 import com.example.team6demo.model.Order;
 import com.example.team6demo.model.model.Customer;
 import com.example.team6demo.model.model.PaymentMethod;
@@ -51,7 +52,7 @@ public class OrderSampleContentCreator extends BaseComponent implements CommandL
 		orderService.checkout(firstOrder, PaymentMethod.CREDIT_CARD);
 
 		// Second customer and order
-		Customer secondCustomer = customerService.get(2L);
+		Customer secondCustomer = (Customer) customerService.get(2L);
 		Order secondOrder = orderService.initiateOrder(secondCustomer);
 		// Add item(s) to second order
 		orderService.addItem(secondOrder, productService.findBySerial("SN1000-0002"), 1);
@@ -62,7 +63,7 @@ public class OrderSampleContentCreator extends BaseComponent implements CommandL
 		orderService.checkout(secondOrder, PaymentMethod.CASH);
 
 		// Third customer and order
-		Customer thirdCustomer = customerService.findByEmail("malcolm.paker@gmailx.com");
+		Customer thirdCustomer = customerService.findByEmail("melina.vasilop@gmailx.com");
 		Order thirdOrder = orderService.initiateOrder(thirdCustomer);
 		orderService.addItem(thirdOrder, productService.findBySerial("SN1000-0001"), 3);
 		orderService.addItem(thirdOrder, productService.findBySerial("SN1000-0002"), 2);
@@ -71,7 +72,7 @@ public class OrderSampleContentCreator extends BaseComponent implements CommandL
 		orderService.checkout(thirdOrder, PaymentMethod.CREDIT_CARD);
 
 		// Fourth customer and order
-		Customer fourthCustomer = customerService.findByEmail("terry.jones@gmailx.com");
+		Customer fourthCustomer = customerService.findByEmail("alexia.tsrk@gmailx.com");
 		Order fourthOrder = orderService.initiateOrder(fourthCustomer);
 		orderService.addItem(fourthOrder, productService.findBySerial("SN1300-0001"), 1);
 		orderService.addItem(fourthOrder, productService.findBySerial("SN1400-0001"), 2);
@@ -83,7 +84,7 @@ public class OrderSampleContentCreator extends BaseComponent implements CommandL
 
 		// **** SOME EXTRA ORDERS FOR SHOWCASING WITHIN THE APPLICATION **** //
 		// customer and order
-		Customer c5 = customerService.get(5L);
+		Customer c5 = (Customer) customerService.get(5L);
 		Order o5 = orderService.initiateOrder(c5);
 		// Add item(s) to order
 		orderService.addItem(o5, productService.findBySerial("SN1000-0002"), 4);

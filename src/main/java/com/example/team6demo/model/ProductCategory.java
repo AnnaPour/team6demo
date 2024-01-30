@@ -19,7 +19,7 @@ public class ProductCategory extends BaseModel {
     @NotNull
     @Column(length = 50, nullable = false)
     private String categoryName;
-
+    private String description;
     @OneToMany(mappedBy = "productCategory", cascade = CascadeType.ALL)
     private List<Product> products;
 

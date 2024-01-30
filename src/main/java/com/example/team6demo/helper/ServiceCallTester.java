@@ -18,6 +18,6 @@ public class ServiceCallTester extends BaseComponent implements CommandLineRunne
 	@Override
 	public void run(final String... args) throws Exception {
 		logger.debug("{}", productService.get(1L));
-		logger.debug("{}", orderService.findWithAllAssociations(2L).get());
+		logger.debug("{}", orderService.get(2L));
 	}
 }

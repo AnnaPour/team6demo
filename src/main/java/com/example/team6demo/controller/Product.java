@@ -1,14 +1,6 @@
 package com.example.team6demo.controller;
 
-package gr.codelearn.spring.showcase.app.controller;
 
-import gr.codelearn.spring.showcase.app.mapper.BaseMapper;
-import gr.codelearn.spring.showcase.app.mapper.ProductMapper;
-import gr.codelearn.spring.showcase.app.model.Product;
-import gr.codelearn.spring.showcase.app.service.BaseService;
-import gr.codelearn.spring.showcase.app.service.ProductService;
-import gr.codelearn.spring.showcase.app.transfer.ApiResponse;
-import gr.codelearn.spring.showcase.app.transfer.resource.ProductResource;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
