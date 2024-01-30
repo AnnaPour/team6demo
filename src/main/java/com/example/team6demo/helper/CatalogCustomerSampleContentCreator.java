@@ -3,10 +3,8 @@ package com.example.team6demo.helper;
 
 import com.example.team6demo.base.BaseComponent;
 import com.example.team6demo.model.Product;
-import com.example.team6demo.model.ProductCategory;
-import com.example.team6demo.model.model.Category;
-import com.example.team6demo.model.model.Customer;
-import com.example.team6demo.model.model.CustomerCategory;
+import com.example.team6demo.model.Category;
+import com.example.team6demo.model.Customer;
 import com.example.team6demo.services.CategoryService;
 import com.example.team6demo.services.CustomerService;
 import com.example.team6demo.services.ProductService;

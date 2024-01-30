@@ -1,5 +1,6 @@
-package com.example.team6demo.model.model;
+package com.example.team6demo.model;
 
+import com.example.team6demo.model.model.BaseModel;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.SequenceGenerator;

@@ -1,6 +1,9 @@
 package com.example.team6demo.services;
 
 
+import com.example.team6demo.model.Customer;
+import com.example.team6demo.model.Order;
+import com.example.team6demo.model.OrderItem;
 import com.example.team6demo.model.Product;
 import com.example.team6demo.model.model.*;
 import com.example.team6demo.repository.OrderRepository;

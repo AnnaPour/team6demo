@@ -1,7 +1,7 @@
 package com.example.team6demo.services;
 
 
-import com.example.team6demo.model.model.Category;
+import com.example.team6demo.model.Category;
 import com.example.team6demo.repository.CategoryRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.jpa.repository.JpaRepository;

@@ -3,7 +3,7 @@ package com.example.team6demo.controller;
 
 
 import com.example.team6demo.mapper.CustomerMapper;
-import com.example.team6demo.model.model.Customer;
+import com.example.team6demo.model.Customer;
 import com.example.team6demo.services.BaseService;
 import com.example.team6demo.services.CustomerService;
 import com.example.team6demo.tran.resource.CustomerResource;

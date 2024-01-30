@@ -1,6 +1,6 @@
 package com.example.team6demo.services;
 
-import com.example.team6demo.model.model.Customer;
+import com.example.team6demo.model.Customer;
 import com.example.team6demo.repository.CustomerRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.jpa.repository.JpaRepository;

@@ -1,6 +1,8 @@
-package com.example.team6demo.model.model;
+package com.example.team6demo.model;
 
+import com.example.team6demo.model.Order;
 import com.example.team6demo.model.Product;
+import com.example.team6demo.model.model.BaseModel;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 import lombok.*;

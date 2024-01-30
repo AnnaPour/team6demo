@@ -3,7 +3,7 @@ package com.example.team6demo.mapper;
 
 
 
-import com.example.team6demo.model.model.Customer;
+import com.example.team6demo.model.Customer;
 import com.example.team6demo.tran.resource.CustomerResource;
 import org.mapstruct.Mapper;
 
