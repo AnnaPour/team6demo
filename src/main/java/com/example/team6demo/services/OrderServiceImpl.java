@@ -79,12 +79,10 @@ public abstract class OrderServiceImpl extends BaseServiceImpl<Order> implements
 	@Override
 	public Order checkout(final Order order, final PaymentMethod paymentMethod) {
 		if (!validate(order)) {
-			logger.warn("Order should have customer, order items, and payment type defined before being able to " +
-						"checkout the order.");
-			return null;
+			logger.error("Order validation failed for checkout. Order: {}", order);
+			throw new IllegalArgumentException("Order is not in a valid state for checkout");
 		}
 
-		// Set all order fields with proper values
 		order.setPaymentMethod(paymentMethod);
 		order.setSubmitDate(new Date());
 		order.setCost(giveFinalCost(order));

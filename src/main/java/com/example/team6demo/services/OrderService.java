@@ -18,9 +18,9 @@ public interface OrderService extends BaseService<Order, Long>  {
     }
 
     default Order checkout(Order order, PaymentMethod paymentMethod) {
-        return null;
-    }
-
+        if (order == null) {
+            throw new IllegalArgumentException("Order cannot be null for checkout");
+        }
 
     Order checkout(Order secondOrder, PaymentMethod paymentMethod);
 }
