@@ -1,6 +1,6 @@
 package com.example.team6demo.model;
 import lombok.Getter;
-public class ProductCategory {
+
 
     @Getter
     public enum ProductCategory {
@@ -9,4 +9,4 @@ public class ProductCategory {
 
 
     }
-}
+

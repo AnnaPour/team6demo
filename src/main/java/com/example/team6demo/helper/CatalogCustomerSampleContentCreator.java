@@ -5,6 +5,7 @@ import com.example.team6demo.base.BaseComponent;
 import com.example.team6demo.model.Product;
 import com.example.team6demo.model.Category;
 import com.example.team6demo.model.Customer;
+import com.example.team6demo.model.ProductCategory;
 import com.example.team6demo.services.CategoryService;
 import com.example.team6demo.services.CustomerService;
 import com.example.team6demo.services.ProductService;
@@ -33,20 +34,20 @@ public class CatalogCustomerSampleContentCreator extends BaseComponent implement
 
     @Override
 	public void run(String... args) throws Exception {
-		Category newCategory = categoryService.create(Product.builder().serial("PRODUCTS").build().getCategory());
+		Category newCategory = categoryService.create(Product.builder().serial("Product").build().getCategory());
 		logger.info("Created {}.", newCategory);
 
 		List<Product> products = List.of(
-				Product.builder().serial("SN1000-0001").name("ΚΑΦΕΣ")
-					   .price(BigDecimal.valueOf(1629)).category(newCategory).build(),
-				Product.builder().serial("SN1000-0002").name("ΣΟΥΒΛΑΚΙΑ")
-					   .price(BigDecimal.valueOf(1749)).category(newCategory).build(),
-				Product.builder().serial("SN1100-0001").name("ΜΕΞΙΚΑΝΙΚΟ")
-					   .price(BigDecimal.valueOf(1479.99)).category(newCategory).build(),
-				Product.builder().serial("SN1100-0002").name("ΠΙΤΣΑ")
-					   .price(BigDecimal.valueOf(1199)).category(newCategory).build(),
-				Product.builder().serial("SN1200-0001").name("BURGER")
-					   .price(BigDecimal.valueOf(899.49)).category(newCategory).build()
+				Product.builder().serial("SN1000-0001").name("Americano").productCategory(ProductCategory.COFFEE)
+					   .price(BigDecimal.valueOf(2.00)).category(newCategory).build(),
+				Product.builder().serial("SN1000-0002").name("Καλαμακι κοτοπουλο").productCategory(ProductCategory.SOUVLAKI)
+					   .price(BigDecimal.valueOf(2.50)).category(newCategory).build(),
+				Product.builder().serial("SN1100-0001").name("Burrito").productCategory(ProductCategory.MEXICAN)
+					   .price(BigDecimal.valueOf(4.60)).category(newCategory).build(),
+				Product.builder().serial("SN1100-0002").name("Margarita").productCategory(ProductCategory.PIZZA)
+					   .price(BigDecimal.valueOf(6.99)).category(newCategory).build(),
+				Product.builder().serial("SN1200-0001").name("BBQ Burger").productCategory(ProductCategory.BURGER)
+					   .price(BigDecimal.valueOf(8.99)).category(newCategory).build()
 );
 
 		var productsCreated = productService.createAll(products);

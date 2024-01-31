@@ -23,6 +23,7 @@ public class Store extends BaseModel {
 
     @Column(length = 100, nullable = false)
     private String address;
+    @Setter
     @Column(length = 100, nullable = false)
     private String categoryName;
 
@@ -48,10 +49,6 @@ public class Store extends BaseModel {
 
     public void setAddress(String address) {
         this.address = address;
-    }
-
-    public void setCategoryName(String categoryName) {
-        this.categoryName = categoryName;
     }
 
     private Integer id;

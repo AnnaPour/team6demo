@@ -79,7 +79,7 @@ public class OrderSampleContentCreator extends BaseComponent implements CommandL
 		orderService.addItem(fourthOrder, productService.findBySerial("SN1000-0003"), 1);
 		orderService.addItem(fourthOrder, productService.findBySerial("SN1000-0004"), 1);
 		// Checkout 4th order
-		orderService.checkout(fourthOrder, PaymentMethod.CREDIT_CARD);
+		orderService.checkout(fourthOrder, PaymentMethod.REVOLUT);
 
 		// **** SOME EXTRA ORDERS FOR SHOWCASING WITHIN THE APPLICATION **** //
 		// customer and order
@@ -98,7 +98,7 @@ public class OrderSampleContentCreator extends BaseComponent implements CommandL
 		// Add item(s) to order
 		orderService.addItem(o6, productService.findBySerial("SN1200-0001"), 2);
 		// Checkout order
-		orderService.checkout(o6, PaymentMethod.CREDIT_CARD);
+		orderService.checkout(o6, PaymentMethod.PAYPAL);
 
 		// customer and order
 		Customer c7 = (Customer) customerService.get(7L);
@@ -107,7 +107,7 @@ public class OrderSampleContentCreator extends BaseComponent implements CommandL
 		orderService.addItem(o7, productService.findBySerial("SN1000-0002"), 4);
 		orderService.addItem(o7, productService.findBySerial("SN1200-0001"), 1);
 		// Checkout order
-		orderService.checkout(o7, PaymentMethod.CREDIT_CARD);
+		orderService.checkout(o7, PaymentMethod.IRIS);
 
 		// customer and order
 		Customer c8 = (Customer) customerService.get(8L);
