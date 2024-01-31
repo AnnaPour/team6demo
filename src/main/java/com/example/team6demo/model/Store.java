@@ -35,7 +35,7 @@ public class Store extends BaseModel {
     }
 
     public void setBrandName(String brandName) {
-        this.brandName = brandName;
+        this.name = name;
     }
 
     public void setEmail(String email) {
@@ -55,7 +55,7 @@ public class Store extends BaseModel {
     }
 
     private Integer id;
-    private String brandName;
+    private String name;
     private String email;
     private Integer phone;
     private String address;

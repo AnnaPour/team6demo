@@ -17,7 +17,7 @@ import lombok.*;
 @Entity
 @Table(name = "CATEGORIES")
 @SequenceGenerator(name = "idGenerator", sequenceName = "CATEGORIES_SEQ", initialValue = 1, allocationSize = 1)
-public class Category extends BaseModel {
+public class Category extends BaseModel{
 	@NotNull
 	@Column(length = 50, nullable = false)
 	private String description;

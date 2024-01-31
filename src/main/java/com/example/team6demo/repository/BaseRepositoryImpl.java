@@ -2,6 +2,7 @@ package com.example.team6demo.repository;
 
 import com.example.team6demo.base.BaseComponent;
 import com.example.team6demo.model.BaseModel;
+import com.example.team6demo.services.BaseService;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -21,8 +22,9 @@ public abstract class BaseRepositoryImpl<T extends BaseModel> extends BaseCompon
         return item;
     }
 
+    @SafeVarargs
     @Override
-    public List<T> createAll(final T... items) {
+    public final List<T> createAll(final T... items) {
         return createAll(Arrays.asList(items));
     }
 

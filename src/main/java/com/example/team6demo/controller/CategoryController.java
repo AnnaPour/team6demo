@@ -28,7 +28,7 @@ public class CategoryController extends BaseController<Category, CategoryResourc
     }
 
     @Override
-    protected BaseMapper<Category, CategoryResource> getMapper() {
+    protected BaseMapper<jdk.jfr.Category, CategoryResource> getMapper() {
         return categoryMapper;
     }
 

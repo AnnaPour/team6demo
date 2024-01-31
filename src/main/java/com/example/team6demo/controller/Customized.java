@@ -1,4 +1,4 @@
-package com.example.team6demo.controlle
+package com.example.team6demo.controller;
 
 
 import com.example.team6demo.base.BaseComponent;

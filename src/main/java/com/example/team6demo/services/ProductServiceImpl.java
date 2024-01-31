@@ -1,6 +1,7 @@
 package com.example.team6demo.services;
 
 
+import com.example.team6demo.model.Category;
 import com.example.team6demo.model.Product;
 import com.example.team6demo.repository.ProductRepository;
 import lombok.RequiredArgsConstructor;
@@ -26,7 +27,7 @@ public class ProductServiceImpl extends BaseServiceImpl<Product> implements Prod
 	@Override
 	public Product create(final Product product, final Long categoryId) {
 		var category = categoryService.get(categoryId);
-		product.setCategory(category);
+		product.setCategory((Category) category);
 		return productRepository.save(product);
 	}
 }

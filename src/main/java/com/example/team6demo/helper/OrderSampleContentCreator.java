@@ -3,6 +3,7 @@ package com.example.team6demo.helper;
 
 import com.example.team6demo.base.BaseComponent;
 import com.example.team6demo.model.Customer;
+import com.example.team6demo.model.Order;
 import com.example.team6demo.model.PaymentMethod;
 import com.example.team6demo.services.CustomerService;
 import com.example.team6demo.services.OrderService;
@@ -92,7 +93,7 @@ public class OrderSampleContentCreator extends BaseComponent implements CommandL
 		orderService.checkout(o5, PaymentMethod.CASH);
 
 		// customer and order
-		Customer c6 = customerService.get(6L);
+		Customer c6 = (Customer) customerService.get(6L);
 		Order o6 = orderService.initiateOrder(c6);
 		// Add item(s) to order
 		orderService.addItem(o6, productService.findBySerial("SN1200-0001"), 2);
@@ -100,7 +101,7 @@ public class OrderSampleContentCreator extends BaseComponent implements CommandL
 		orderService.checkout(o6, PaymentMethod.CREDIT_CARD);
 
 		// customer and order
-		Customer c7 = customerService.get(7L);
+		Customer c7 = (Customer) customerService.get(7L);
 		Order o7 = orderService.initiateOrder(c7);
 		// Add item(s) to order
 		orderService.addItem(o7, productService.findBySerial("SN1000-0002"), 4);
@@ -109,7 +110,7 @@ public class OrderSampleContentCreator extends BaseComponent implements CommandL
 		orderService.checkout(o7, PaymentMethod.CREDIT_CARD);
 
 		// customer and order
-		Customer c8 = customerService.get(8L);
+		Customer c8 = (Customer) customerService.get(8L);
 		Order o8 = orderService.initiateOrder(c8);
 		// Add item(s) to order
 		orderService.addItem(o8, productService.findBySerial("SN1000-0002"), 1);
@@ -119,7 +120,7 @@ public class OrderSampleContentCreator extends BaseComponent implements CommandL
 		orderService.checkout(o8, PaymentMethod.CASH);
 
 		// customer and order
-		Customer c9 = customerService.get(9L);
+		Customer c9 = (Customer) customerService.get(9L);
 		Order o9 = orderService.initiateOrder(c9);
 		// Add item(s) to order
 		orderService.addItem(o9, productService.findBySerial("SN1200-0001"), 1);
@@ -127,7 +128,7 @@ public class OrderSampleContentCreator extends BaseComponent implements CommandL
 		orderService.checkout(o9, PaymentMethod.CASH);
 
 		// customer and order
-		Customer c10 = customerService.get(10L);
+		Customer c10 = (Customer) customerService.get(10L);
 		Order o10 = orderService.initiateOrder(c10);
 		// Add item(s) to order
 		orderService.addItem(o10, productService.findBySerial("SN1200-0001"), 3);
