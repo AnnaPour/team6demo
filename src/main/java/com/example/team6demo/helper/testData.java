@@ -19,12 +19,12 @@ public class testData {
 
     ArrayList<Store> list = new ArrayList<>(){};
 
-    Store data = new Store(1,"Masoutis", "masoutis@gmail.com",20,"Grevenwn_1","SuperMarket");
-    Store data1 = new Store(2,"Karbeli", "karbeli@gmail.com",20,"Grevenwn_2","Fournos");
-    Store data2 = new Store(3,"SouvLike", "sounlike@gmail.com",20,"Grevenwn_3","Fournos");
-    Store data3 = new Store(4,"Tortigia", "tortigia@gmail.com",20,"Grevenwn_4","MExican");
-    Store data4 = new Store(5,"HAM_burger", "hamburger@gmail.com",20,"Grevenwn_10","Burger");
-    Store data5 = new Store(6,"La_italiana", "mitaliana@gmail.com",20,"Grevenwn_20","pasta");
+    Store data = new Store(1,"Souvlakeri", "souvlaki@gmail.com",20,"Athens,12334","Souvlaki");
+    Store data1 = new Store(2,"Las Ramblas", "lasramblas@gmail.com",20,"Athens,12334","Coffee");
+    Store data2 = new Store(3,"SouvLike", "sounlike@gmail.com",20,"Athens,12334","Souvlaki");
+    Store data3 = new Store(4,"Tortigia", "tortigia@gmail.com",20,"Athens,12334","Mexican");
+    Store data4 = new Store(5,"HAM_burger", "hamburger@gmail.com",20,"Athens,12334","Burger");
+    Store data5 = new Store(6,"La_italiana", "mitaliana@gmail.com",20,"Athens,12334","Pizza");
 
 
     public ArrayList<Store> getList() {
