@@ -33,7 +33,7 @@ public class Customer extends BaseModel {
 	private String lastname;
 
 	@Min(value = 18, message = "A customer cannot be under 18")
-	@Max(value = 120, message = "A customer cannot be above 18")
+	@Max(value = 120, message = "A customer cannot be above 120")
 	private Integer age;
 
 	@Column(length = 50)
